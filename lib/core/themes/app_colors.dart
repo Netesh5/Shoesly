@@ -1,6 +1,19 @@
 import 'package:flutter/material.dart';
 
 abstract class AppColors {
+  static Color primaryDark = const Color(0xff070304);
+  static Color primaryDark800 = const Color(0xff090506);
+  static Color primaryDark700 = const Color(0xff0B0808);
+  static Color primaryDark600 = const Color(0xff0D0B0B);
+  static Color primaryDark500 = const Color(0xff101010);
+
+  //Light color
+  static Color primarylight400 = const Color(0xff6F6F6F);
+  static Color primarylight300 = const Color(0xffB7B7B7);
+  static Color primarylight200 = const Color(0xffE7E7E7);
+  static Color primarylight100 = const Color(0xffF3F3F3);
+  static Color primarylight = const Color(0xffFFFFFF);
+
   /// brandGreen900 figma properties
   /// hex: #62740d
   /// opacity: 1

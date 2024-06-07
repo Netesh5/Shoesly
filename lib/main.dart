@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:priority_soft_ecommerce/core/themes/app_theme.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/pages/homepage_view.dart';
 
 void main() {
@@ -10,9 +11,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomePageView(),
+      theme: AppTheme.lightTheme,
+      home: const HomePageView(),
     );
   }
 }
