@@ -20,5 +20,15 @@ class AppTheme {
         ).copyWith(
           background: AppColors.primarylight,
         ),
+        chipTheme: ChipThemeData(
+          backgroundColor: AppColors.primarylight,
+          labelStyle: AppTextStyle.headline600.copyWith(
+            color: AppColors.primarylight300,
+          ),
+          secondaryLabelStyle: AppTextStyle.headline600.copyWith(
+            color: AppColors.primaryDark,
+          ),
+          selectedColor: AppColors.primarylight,
+        ),
       );
 }
