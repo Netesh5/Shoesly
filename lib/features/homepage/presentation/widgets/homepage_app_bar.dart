@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
-import 'package:priority_soft_ecommerce/core/constants/icons_assets.dart';
-import 'package:priority_soft_ecommerce/core/constants/icons_style.dart';
+import 'package:priority_soft_ecommerce/core/constants/assets.dart';
+import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 
@@ -43,7 +43,7 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
             ),
             IconButton(
               onPressed: () {},
-              icon: CustomIcon.customIcon(AppIcons.cart, width: 24),
+              icon: AssetStyle.applyStyle(Assets.cart, width: 24),
             )
           ],
         ),
