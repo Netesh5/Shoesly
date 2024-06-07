@@ -1,4 +1,5 @@
 import 'package:flutter/widgets.dart';
+import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 
 abstract class AppTextStyle {
   /// headline900 figma properties
@@ -9,13 +10,13 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline900 = TextStyle(
-    fontFamily: 'Urbanist',
-    fontSize: 70,
-    height: 1.5,
-    fontWeight: FontWeight.w600,
-    letterSpacing: 0.7,
-  );
+  static TextStyle headline900 = TextStyle(
+      fontFamily: 'Urbanist',
+      fontSize: 70,
+      height: 1.5,
+      fontWeight: FontWeight.w600,
+      letterSpacing: 0.7,
+      color: AppColors.primaryDark);
 
   /// headline900 figma properties
   /// fontFamily: Urbanist
@@ -25,7 +26,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline90048 = TextStyle(
+  static TextStyle headline90048 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 48,
     height: 1.21,
@@ -41,7 +42,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline800 = TextStyle(
+  static TextStyle headline800 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 36,
     height: 1.28,
@@ -57,7 +58,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 0.3px
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline700 = TextStyle(
+  static TextStyle headline700 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 30,
     height: 1.5,
@@ -73,7 +74,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline70024 = TextStyle(
+  static TextStyle headline70024 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 24,
     height: 1.42,
@@ -89,7 +90,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline600 = TextStyle(
+  static TextStyle headline600 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 20,
     height: 1.5,
@@ -105,7 +106,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline500 = TextStyle(
+  static TextStyle headline500 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 18,
     height: 1.44,
@@ -121,7 +122,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline400 = TextStyle(
+  static TextStyle headline400 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 16,
     height: 1.63,
@@ -137,7 +138,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline300 = TextStyle(
+  static TextStyle headline300 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 14,
     height: 1.71,
@@ -153,7 +154,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline200 = TextStyle(
+  static TextStyle headline200 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 12,
     height: 1.83,
@@ -169,7 +170,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle headline100 = TextStyle(
+  static TextStyle headline100 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 10,
     height: 2,
@@ -185,7 +186,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle heading300 = TextStyle(
+  static TextStyle heading300 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 14,
     height: 1.5,
@@ -201,7 +202,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle heading200 = TextStyle(
+  static TextStyle heading200 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 12,
     height: 1.83,
@@ -217,7 +218,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle heading100 = TextStyle(
+  static TextStyle heading100 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 10,
     height: 2,
@@ -233,7 +234,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle bodytext300 = TextStyle(
+  static TextStyle bodytext300 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 16,
     height: 1.63,
@@ -249,7 +250,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle bodytext200 = TextStyle(
+  static TextStyle bodytext200 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 14,
     height: 1.71,
@@ -265,7 +266,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle bodytext100 = TextStyle(
+  static TextStyle bodytext100 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 12,
     height: 1.83,
@@ -281,7 +282,7 @@ abstract class AppTextStyle {
   /// letterSpacing: 1%
   /// fontStyle: none
   /// decoration: none
-  static const TextStyle bodytext10 = TextStyle(
+  static TextStyle bodytext10 = const TextStyle(
     fontFamily: 'Urbanist',
     fontSize: 11,
     height: 1.5,

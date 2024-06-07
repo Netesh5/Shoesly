@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "203224705782",
+    "project_id": "shoesly-190b4",
+    "storage_bucket": "shoesly-190b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:203224705782:android:e4cfca2036ea8cb1009ad7",
+        "android_client_info": {
+          "package_name": "com.netesh.priority_soft_ecommerce"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBCAVpSXKrfRW07gLb5NJlRrDN3Aq6uX_4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
