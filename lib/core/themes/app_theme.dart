@@ -4,8 +4,9 @@ import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 
 class AppTheme {
   static ThemeData get lightTheme => ThemeData(
+        scaffoldBackgroundColor: AppColors.primarylight,
         useMaterial3: false,
-        fontFamily: 'Urbanist',
+        fontFamily: 'urbanist',
         primaryColor: AppColors.primarylight,
         appBarTheme: AppBarTheme(
           color: AppColors.primarylight,
@@ -13,6 +14,11 @@ class AppTheme {
         textTheme: TextTheme(
           displayLarge: AppTextStyle.headline900,
           titleMedium: AppTextStyle.bodytext300,
+        ),
+        colorScheme: ColorScheme.light(
+          background: AppColors.primarylight,
+        ).copyWith(
+          background: AppColors.primarylight,
         ),
       );
 }
