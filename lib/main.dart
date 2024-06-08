@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:priority_soft_ecommerce/core/injector/injector.dart';
+
 import 'package:priority_soft_ecommerce/core/themes/app_theme.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/pages/homepage_view.dart';
 import 'package:priority_soft_ecommerce/firebase_options.dart';
@@ -9,6 +11,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  await DI.init();
   runApp(const MyApp());
 }
 

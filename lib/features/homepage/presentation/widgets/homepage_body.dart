@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:priority_soft_ecommerce/core/utils/size_utils.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_card_widget.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/homepage_app_bar.dart';
 

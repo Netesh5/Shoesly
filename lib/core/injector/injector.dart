@@ -1,6 +1,9 @@
 import 'package:get_it/get_it.dart';
+import 'package:priority_soft_ecommerce/core/injector/shoes_injector.dart';
 
-class Injector {
+class DI {
   static final instance = GetIt.instance;
-  static init() {}
+  static init() async {
+    await ShoesInjector.init();
+  }
 }
