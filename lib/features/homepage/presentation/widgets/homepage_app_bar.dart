@@ -10,10 +10,8 @@ import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/utils/size_utils.dart';
 
 class HomepageAppBar extends StatefulWidget {
-  const HomepageAppBar({
-    super.key,
-  });
-
+  const HomepageAppBar({super.key, required this.onTap});
+  final ValueChanged<ShoesBrand> onTap;
   @override
   State<HomepageAppBar> createState() => _HomepageAppBarState();
 }
@@ -64,6 +62,7 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
                           _selectedChipIndex = selected ? index : 0;
                         },
                       );
+                      widget.onTap(ShoesBrand.values[_selectedChipIndex]);
                     },
                   );
                 },
