@@ -38,7 +38,7 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
             ),
             IconButton(
               onPressed: () {},
-              icon: AssetStyle.applyStyle(Assets.cart, width: 24),
+              icon: CustomIcon.applyStyle(Assets.cart, width: 24),
             )
           ],
         ),

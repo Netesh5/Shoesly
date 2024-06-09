@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:priority_soft_ecommerce/core/constants/assets.dart';
+import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
 import 'package:priority_soft_ecommerce/core/cubit/common_state.dart';
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
+import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
+import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/widgets/shimmer_effect.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/cubit/fetch_shoes_data_cubit.dart';
@@ -17,10 +22,12 @@ class HomePageBody extends StatefulWidget {
 }
 
 class _HomePageBodyState extends State<HomePageBody> {
+  late ScrollController scrollController;
+  bool isVisible = true;
   @override
   void initState() {
     context.read<FetchShoesDataCubit>().fetchStoreData();
-    // CloudFirestoreService().uplodImage();
+    scrollController = ScrollController();
     super.initState();
   }
 
@@ -38,93 +45,100 @@ class _HomePageBodyState extends State<HomePageBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: CustomScrollView(
-      slivers: [
-        HomepageAppBar(
-          onTap: (value) {
-            currentBrand = value;
-            setState(() {});
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        body: NotificationListener<UserScrollNotification>(
+          onNotification: (notification) {
+            if (notification.direction == ScrollDirection.forward) {
+              setState(() {
+                isVisible = true;
+              });
+            } else if (notification.direction == ScrollDirection.reverse) {
+              setState(() {
+                isVisible = false;
+              });
+            }
+            return true;
           },
-        ),
-        SliverPadding(
-          padding: const EdgeInsets.symmetric(),
-          sliver: BlocBuilder<FetchShoesDataCubit, CommonState>(
-            builder: (context, state) {
-              if (state is CommonLoadingState) {
-                return const CustomShimmerEffect();
-              }
-              if (state is CommonSuccessState<List<Shoes>>) {
-                filterData = filterItems(state.data);
+          child: CustomScrollView(
+            controller: scrollController,
+            slivers: [
+              HomepageAppBar(
+                onTap: (value) {
+                  currentBrand = value;
+                  setState(() {});
+                },
+              ),
+              SliverPadding(
+                padding: const EdgeInsets.symmetric(),
+                sliver: BlocBuilder<FetchShoesDataCubit, CommonState>(
+                  builder: (context, state) {
+                    if (state is CommonLoadingState) {
+                      return const CustomShimmerEffect();
+                    }
+                    if (state is CommonSuccessState<List<Shoes>>) {
+                      filterData = filterItems(state.data);
 
-                return SliverPadding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
-                  sliver: SliverGrid.builder(
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2,
-                        childAspectRatio: 0.6,
-                        mainAxisSpacing: 20,
-                        crossAxisSpacing: 14,
-                      ),
-                      itemCount: filterData.length,
-                      itemBuilder: (context, index) {
-                        // if (currentIndex == 0) {
-                        //   data.clear();
-                        //   data.addAll(state.data);
-                        // }
-                        // if (currentIndex == 1) {
-                        //   data.clear();
-                        //   data = state.data
-                        //       .where((element) =>
-                        //           element.brand == ShoesBrand.Nike.brandName)
-                        //       .toList();
-                        // }
-                        // if (currentIndex == 2) {
-                        //   data.clear();
-                        //   data = state.data
-                        //       .where((element) =>
-                        //           element.brand == ShoesBrand.Jordan.brandName)
-                        //       .toList();
-                        // }
-                        // if (currentIndex == 3) {
-                        //   data.clear();
-                        //   data = state.data
-                        //       .where((element) =>
-                        //           element.brand == ShoesBrand.Adidas.brandName)
-                        //       .toList();
-                        // }
-                        // if (currentIndex == 4) {
-                        //   data.clear();
-                        //   data = state.data
-                        //       .where((element) =>
-                        //           element.brand == ShoesBrand.Reebok.brandName)
-                        //       .toList();
-                        // }
-
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            ItemCardWidget(
-                              data: filterData,
-                              index: index,
+                      return SliverPadding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        sliver: SliverGrid.builder(
+                            gridDelegate:
+                                const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              childAspectRatio: 0.6,
+                              mainAxisSpacing: 20,
+                              crossAxisSpacing: 14,
                             ),
-                            const SizedBox(
-                              height: 8,
-                            ),
-                            ItemInfoWidget(
-                              data: filterData,
-                              index: index,
-                            ),
-                          ],
-                        );
-                      }),
-                );
-              }
-              return const CustomShimmerEffect();
-            },
+                            itemCount: filterData.length,
+                            itemBuilder: (context, index) {
+                              return Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  ItemCardWidget(
+                                    data: filterData,
+                                    index: index,
+                                  ),
+                                  const SizedBox(
+                                    height: 8,
+                                  ),
+                                  ItemInfoWidget(
+                                    data: filterData,
+                                    index: index,
+                                  ),
+                                ],
+                              );
+                            }),
+                      );
+                    }
+                    return const CustomShimmerEffect();
+                  },
+                ),
+              )
+            ],
           ),
-        )
-      ],
-    ));
+        ),
+        floatingActionButton: isVisible
+            ? Padding(
+                padding: const EdgeInsets.symmetric(vertical: 20),
+                child: SizedBox(
+                  height: 40,
+                  width: 120,
+                  child: FloatingActionButton.extended(
+                    backgroundColor: AppColors.primaryDark,
+                    onPressed: () {},
+                    label: Text(
+                      "Filter",
+                      style: AppTextStyle.heading300.copyWith(
+                        color: AppColors.primarylight,
+                      ),
+                    ),
+                    icon: CustomIcon.applyStyle(
+                      Assets.filter,
+                      width: 20,
+                      color: AppColors.primarylight,
+                    ),
+                  ),
+                ),
+              )
+            : null);
   }
 }

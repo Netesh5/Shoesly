@@ -30,7 +30,7 @@ class ItemInfoWidget extends StatelessWidget {
           ),
           Row(
             children: [
-              AssetStyle.applyStyle(Assets.star,
+              CustomIcon.applyStyle(Assets.star,
                   width: 15, color: AppColors.primaryWarning500),
               const SizedBox(
                 width: 10,

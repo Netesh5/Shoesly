@@ -35,25 +35,25 @@ class ItemCardWidget extends StatelessWidget {
             child: Column(
               children: [
                 if (data[index].brand == ShoesBrand.Jordan.brandName)
-                  AssetStyle.applyStyle(
+                  CustomIcon.applyStyle(
                     Assets.jordanGrey,
                     color: AppColors.primarylight300,
                     width: 24,
                   ),
                 if (data[index].brand == ShoesBrand.Adidas.brandName)
-                  AssetStyle.applyStyle(
+                  CustomIcon.applyStyle(
                     Assets.adidasGrey,
                     color: AppColors.primarylight300,
                     width: 24,
                   ),
                 if (data[index].brand == ShoesBrand.Reebok.brandName)
-                  AssetStyle.applyStyle(
+                  CustomIcon.applyStyle(
                     Assets.reebokGrey,
                     color: AppColors.primarylight300,
                     width: 30,
                   ),
                 if (data[index].brand == ShoesBrand.Nike.brandName)
-                  AssetStyle.applyStyle(
+                  CustomIcon.applyStyle(
                     Assets.nikeGrey,
                     color: AppColors.primarylight300,
                     width: 24,
