@@ -5,6 +5,8 @@ import 'package:priority_soft_ecommerce/core/constants/assets.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
 import 'package:priority_soft_ecommerce/core/cubit/common_state.dart';
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
+import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
+import 'package:priority_soft_ecommerce/core/routes/routes.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/widgets/shimmer_effect.dart';
@@ -90,21 +92,29 @@ class _HomePageBodyState extends State<HomePageBody> {
                             ),
                             itemCount: filterData.length,
                             itemBuilder: (context, index) {
-                              return Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  ItemCardWidget(
-                                    data: filterData,
-                                    index: index,
-                                  ),
-                                  const SizedBox(
-                                    height: 8,
-                                  ),
-                                  ItemInfoWidget(
-                                    data: filterData,
-                                    index: index,
-                                  ),
-                                ],
+                              return GestureDetector(
+                                onTap: () {
+                                  NavigationService.pushNamed(
+                                    routeName: Routes.detailScreen,
+                                    args: filterData[index],
+                                  );
+                                },
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    ItemCardWidget(
+                                      data: filterData,
+                                      index: index,
+                                    ),
+                                    const SizedBox(
+                                      height: 8,
+                                    ),
+                                    ItemInfoWidget(
+                                      data: filterData,
+                                      index: index,
+                                    ),
+                                  ],
+                                ),
                               );
                             }),
                       );

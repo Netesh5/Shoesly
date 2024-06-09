@@ -1,6 +1,8 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:priority_soft_ecommerce/core/injector/injector.dart';
+import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
+import 'package:priority_soft_ecommerce/core/routes/routes_generator.dart';
 
 import 'package:priority_soft_ecommerce/core/themes/app_theme.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/pages/homepage_view.dart';
@@ -23,6 +25,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: AppTheme.lightTheme,
+      onGenerateRoute: RouteGenerator.routeGenerator,
+      navigatorKey: NavigationService.navigationKey,
       home: const HomePageView(),
     );
   }

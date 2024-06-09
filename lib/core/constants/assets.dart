@@ -18,4 +18,5 @@ class Assets {
   static const vansBlack = "assets/icons/Vans Black.svg";
   static const star = "assets/icons/star.svg";
   static const filter = "assets/icons/filter.svg";
+  static const leftArrow = "assets/icons/arrow-left.svg";
 }
