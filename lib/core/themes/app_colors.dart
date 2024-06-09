@@ -12,6 +12,7 @@ abstract class AppColors {
   static Color primarylight300 = const Color(0xffB7B7B7);
   static Color primarylight200 = const Color(0xffE7E7E7);
   static Color primarylight100 = const Color(0xffF3F3F3);
+  static Color primarylight50 = const Color(0xffE7E7E7);
   static Color primarylight = const Color(0xffFFFFFF);
 
   /// brandGreen900 figma properties

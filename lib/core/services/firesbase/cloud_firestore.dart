@@ -22,31 +22,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -65,31 +65,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -108,31 +108,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -151,31 +151,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -194,31 +194,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -237,31 +237,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -280,31 +280,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -325,31 +325,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -368,31 +368,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -411,31 +411,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -456,31 +456,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]
@@ -499,31 +499,31 @@ class CloudFirestoreService {
               {
                 "name": "Nolan Carder",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Maria Saris",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Gretchen Septimus",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Roger Stanton",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
               {
                 "name": "Hanna Levin",
                 "review":
-                    "Perfect for keeping your feat dry and warm in damp condition",
+                    "Perfect for keeping your feat dry and warm in \ndamp condition",
                 "time": "06-09-2024"
               },
             ]

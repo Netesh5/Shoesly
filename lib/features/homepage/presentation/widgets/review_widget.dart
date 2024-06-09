@@ -39,7 +39,7 @@ class ReviewWidget extends StatelessWidget {
             ),
             Text(
               review.review,
-              style: AppTextStyle.bodytext10,
+              style: AppTextStyle.bodytext100,
               overflow: TextOverflow.ellipsis,
             ),
             const SizedBox(
