@@ -8,16 +8,21 @@ class ShoesModel extends Shoes {
     required super.rating,
     required super.size,
     required super.review,
+    required super.brand,
+    required super.image,
   });
 
-  factory ShoesModel.fromMap(Map<String, dynamic> map) {
+  factory ShoesModel.fromSnapshot(Map<String, dynamic> json) {
+    final data = json;
     return ShoesModel(
-      name: map['name'] as String,
-      description: map['description'] as String,
-      rate: map['rate'] as String,
-      rating: map['rating'] as num,
-      size: map['size'] as num,
-      review: Review.fromMap(map['review'] as Map<String, dynamic>),
+      name: data["name"],
+      description: data['description'] ?? "",
+      rate: data['rate'] ?? "",
+      rating: data['rating'] ?? 0,
+      size: data['size'] ?? 0,
+      review: Review.fromMap(data['review'] ?? {}),
+      brand: data['brand'] ?? "",
+      image: data["image"] ?? "",
     );
   }
 }

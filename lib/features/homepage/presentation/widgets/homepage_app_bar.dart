@@ -29,7 +29,9 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar.large(
+      stretch: true,
       flexibleSpace: FlexibleSpaceBar(
+        collapseMode: CollapseMode.parallax,
         centerTitle: false,
         titlePadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
         title: Row(
@@ -51,8 +53,8 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
       expandedHeight: 100,
       bottom: PreferredSize(
           preferredSize: const Size.fromHeight(80),
-          child: Wrap(
-            spacing: 8.0,
+          child: Row(
+            // spacing: 8.0,
             children: List<Widget>.generate(
               _categories.length,
               (int index) {

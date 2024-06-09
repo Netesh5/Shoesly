@@ -5,6 +5,8 @@ class Shoes {
   final num rating;
   final num size;
   final Review review;
+  final String brand;
+  final String image;
   Shoes({
     required this.name,
     required this.description,
@@ -12,6 +14,8 @@ class Shoes {
     required this.rating,
     required this.size,
     required this.review,
+    required this.brand,
+    required this.image,
   });
 }
 
@@ -26,9 +30,9 @@ class Review {
   });
   factory Review.fromMap(Map<String, dynamic> map) {
     return Review(
-      name: map['name'] as String,
-      review: map['review'] as String,
-      time: map['time'] as String,
+      name: map['name'] ?? "",
+      review: map['review'] ?? "",
+      time: map['time'] ?? "",
     );
   }
 }

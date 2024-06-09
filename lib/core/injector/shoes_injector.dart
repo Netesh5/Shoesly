@@ -14,7 +14,8 @@ class ShoesInjector {
 
     DI.instance.registerLazySingleton<ShoesDataSource>(
         () => ShoesDataSourceImpl(cloudFirestoreService: DI.instance()));
-    DI.instance.registerLazySingleton<ShoesRepo>(() => ShoesRepoImpl());
+    DI.instance.registerLazySingleton<ShoesRepo>(
+        () => ShoesRepoImpl(dataSource: DI.instance()));
 
     DI.instance.registerLazySingleton<FetchShoesDataInteractor>(
         () => FetchShoesDataInteractor(repo: DI.instance()));
