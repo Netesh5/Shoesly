@@ -3,8 +3,11 @@
 import 'package:flutter/material.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
+import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
+import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
+import 'package:priority_soft_ecommerce/core/utils/size_utils.dart';
 
 class HomepageAppBar extends StatefulWidget {
   const HomepageAppBar({
@@ -17,14 +20,6 @@ class HomepageAppBar extends StatefulWidget {
 
 class _HomepageAppBarState extends State<HomepageAppBar> {
   int _selectedChipIndex = 0;
-
-  final List<String> _categories = [
-    'All',
-    'Nike',
-    'Jordan',
-    'Adidas',
-    'Reebok'
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -53,24 +48,27 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
       expandedHeight: 100,
       bottom: PreferredSize(
           preferredSize: const Size.fromHeight(80),
-          child: Row(
-            // spacing: 8.0,
-            children: List<Widget>.generate(
-              _categories.length,
-              (int index) {
-                return ChoiceChip(
-                  label: Text(_categories[index]),
-                  selected: _selectedChipIndex == index,
-                  onSelected: (bool selected) {
-                    setState(
-                      () {
-                        _selectedChipIndex = selected ? index : 0;
-                      },
-                    );
-                  },
-                );
-              },
-            ).toList(),
+          child: Padding(
+            padding: EdgeInsets.only(left: 3.w),
+            child: Row(
+              children: List<Widget>.generate(
+                ShoesBrand.values.length,
+                (int index) {
+                  return ChoiceChip(
+                    label:
+                        Text(ShoesBrand.values[index].brandName.captialize()),
+                    selected: _selectedChipIndex == index,
+                    onSelected: (bool selected) {
+                      setState(
+                        () {
+                          _selectedChipIndex = selected ? index : 0;
+                        },
+                      );
+                    },
+                  );
+                },
+              ).toList(),
+            ),
           )),
     );
   }

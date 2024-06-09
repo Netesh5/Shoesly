@@ -17,10 +17,12 @@ class ShoesModel extends Shoes {
     return ShoesModel(
       name: data["name"],
       description: data['description'] ?? "",
-      rate: data['rate'] ?? "",
+      rate: data['price'] ?? "",
       rating: data['rating'] ?? 0,
       size: data['size'] ?? 0,
-      review: Review.fromMap(data['review'] ?? {}),
+      review: List.from(data['review'] ?? [])
+          .map((e) => Review.fromMap(e))
+          .toList(),
       brand: data['brand'] ?? "",
       image: data["image"] ?? "",
     );

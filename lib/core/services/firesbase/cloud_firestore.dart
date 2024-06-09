@@ -16,14 +16,40 @@ class CloudFirestoreService {
             "name": "Jordan 1 Retro Green",
             "price": "200",
             "brand": "nike",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
@@ -33,14 +59,40 @@ class CloudFirestoreService {
             "name": "Jordan 1 Retro High Tie Dye",
             "price": "250",
             "brand": "nike",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
@@ -50,14 +102,40 @@ class CloudFirestoreService {
             "name": "Jordan 1 Retro High Blue",
             "price": "300",
             "brand": "nike",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
@@ -67,14 +145,40 @@ class CloudFirestoreService {
             "name": "Jordan 1 Retro High Grey and Red",
             "price": "300",
             "brand": "nike",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
@@ -84,14 +188,40 @@ class CloudFirestoreService {
             "name": "Jordan 1 Retro High Grey",
             "price": "350",
             "brand": "nike",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
@@ -101,14 +231,40 @@ class CloudFirestoreService {
             "name": "Jordan Red",
             "price": "350",
             "brand": "jordan",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
@@ -118,14 +274,40 @@ class CloudFirestoreService {
             "name": "Jordan shoes",
             "price": "350",
             "brand": "jordan",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
 
           //Adidas
@@ -137,14 +319,40 @@ class CloudFirestoreService {
             "name": "Adidas Grey",
             "price": "250",
             "brand": "adidas",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
@@ -154,14 +362,40 @@ class CloudFirestoreService {
             "name": "Adidas Neon",
             "price": "250",
             "brand": "adidas",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
@@ -171,14 +405,40 @@ class CloudFirestoreService {
             "name": "Adidas Sports",
             "price": "250",
             "brand": "adidas",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
 
           //Reebok
@@ -186,35 +446,87 @@ class CloudFirestoreService {
             "description":
                 "Engineered to crush any movement-based workout, these On sneakers enhance the label's original Cloud sneaker with cutting edge technologies for a pair. ",
             "image":
-                "https://firebasestorage.googleapis.com/v0/b/shoesly-190b4.appspot.com/o/shoes%2Freebok2.png?alt=media&token=e4a8ef6b-8465-4b76-9f1f-7568782fd9cd",
+                "https://firebasestorage.googleapis.com/v0/b/shoesly-190b4.appspot.com/o/shoes%2FReebok%202.png?alt=media&token=299178b1-48e6-44a2-8ca0-5adba202aaaf",
             "name": "Reebok shoe Black",
             "price": "200",
             "brand": "reebok",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
           {
             "description":
                 "Engineered to crush any movement-based workout, these On sneakers enhance the label's original Cloud sneaker with cutting edge technologies for a pair. ",
             "image":
-                "https://firebasestorage.googleapis.com/v0/b/shoesly-190b4.appspot.com/o/shoes%2Freebok1.png?alt=media&token=cff42c83-7c52-4496-95be-d9922d4ce71e",
+                "https://firebasestorage.googleapis.com/v0/b/shoesly-190b4.appspot.com/o/shoes%2FReebok.png?alt=media&token=72622698-369c-48e9-9b68-50a9c6460d70",
             "name": "Reebok shoe",
             "price": "235",
             "brand": "reebok",
-            "rating": 4,
+            "rating": 4.5,
             "size": 41,
-            "review": {
-              "name": "Nolan Carder",
-              "review":
-                  "Perfect for keeping your feat dry and warm in damp condition",
-              "time": "06-09-2024"
-            },
+            "review": [
+              {
+                "name": "Nolan Carder",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Maria Saris",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Gretchen Septimus",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Roger Stanton",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+              {
+                "name": "Hanna Levin",
+                "review":
+                    "Perfect for keeping your feat dry and warm in damp condition",
+                "time": "06-09-2024"
+              },
+            ]
           },
         ]
       },

@@ -19,7 +19,7 @@ class CustomShimmerEffect extends StatelessWidget {
           itemBuilder: (context, index) {
             return Shimmer.fromColors(
               baseColor: AppColors.primarylight,
-              highlightColor: AppColors.primarylight400,
+              highlightColor: AppColors.primarylight200,
               child: const CustomCardWidget(child: SizedBox()),
             );
           }),

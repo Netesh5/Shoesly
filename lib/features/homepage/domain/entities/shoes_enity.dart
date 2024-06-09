@@ -4,7 +4,7 @@ class Shoes {
   final String rate;
   final num rating;
   final num size;
-  final Review review;
+  final List<Review> review;
   final String brand;
   final String image;
   Shoes({
