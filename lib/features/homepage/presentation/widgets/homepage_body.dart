@@ -102,9 +102,12 @@ class _HomePageBodyState extends State<HomePageBody> {
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
-                                    ItemCardWidget(
-                                      data: filterData,
-                                      index: index,
+                                    Hero(
+                                      tag: filterData[index].name,
+                                      child: ItemCardWidget(
+                                        data: filterData,
+                                        index: index,
+                                      ),
                                     ),
                                     const SizedBox(
                                       height: 8,

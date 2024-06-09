@@ -4,6 +4,7 @@ import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 
 class AppTheme {
   static ThemeData get lightTheme => ThemeData(
+        splashColor: Colors.transparent,
         scaffoldBackgroundColor: AppColors.primarylight,
         useMaterial3: false,
         fontFamily: 'urbanist',

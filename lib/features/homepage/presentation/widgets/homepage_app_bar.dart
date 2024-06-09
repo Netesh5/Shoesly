@@ -59,7 +59,7 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
                     onSelected: (bool selected) {
                       setState(
                         () {
-                          _selectedChipIndex = selected ? index : 0;
+                          _selectedChipIndex = index;
                         },
                       );
                       widget.onTap(ShoesBrand.values[_selectedChipIndex]);
