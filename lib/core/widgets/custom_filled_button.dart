@@ -48,7 +48,7 @@ class CustomFilledButton extends StatelessWidget {
           padding: containerPadding ?? const EdgeInsets.all(14),
           decoration: BoxDecoration(
             color: fillColor,
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(40),
           ),
           alignment: Alignment.center,
           child: Row(

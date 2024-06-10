@@ -12,6 +12,7 @@ import 'package:priority_soft_ecommerce/core/widgets/custom_card_widget.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_navigation_bar.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_round_button.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
+import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/add_to_cart_bottomsheet.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/indicator_widget.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/shoes_detail_description_widget.dart';
 
@@ -31,9 +32,11 @@ class _ShoesDetailBodyState extends State<ShoesDetailBody> {
     super.initState();
   }
 
+  int qty = 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       appBar: CustomAppBar(
         showShadow: false,
         showBackButton: true,
@@ -106,7 +109,12 @@ class _ShoesDetailBodyState extends State<ShoesDetailBody> {
           horizontal: 20,
         ),
         child: BottomNavigationBarWithButton(
-          onChanged: () {},
+          onChanged: () {
+            showAddToBottomSheetCart(context, widget.shoes, (value) {
+              qty = value;
+              setState(() {});
+            });
+          },
           title: "Add to Cart",
           textStyle:
               AppTextStyle.heading300.copyWith(color: AppColors.primarylight),

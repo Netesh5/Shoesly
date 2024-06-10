@@ -4,6 +4,7 @@ import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
 import 'package:priority_soft_ecommerce/core/enums/rating_enum.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
+import 'package:priority_soft_ecommerce/core/utils/calculate_rating.dart';
 import 'package:priority_soft_ecommerce/core/utils/size_utils.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_app_bar.dart';
 import 'package:priority_soft_ecommerce/core/widgets/no_data_widget.dart';
@@ -50,7 +51,7 @@ class _ReviewBodyState extends State<ReviewBody> {
             width: 10,
           ),
           Text(
-            "4.5",
+            calculateAverageRating(widget.shoes.review).toString(),
             style: AppTextStyle.heading300,
           )
         ],
@@ -83,7 +84,7 @@ class _ReviewBodyState extends State<ReviewBody> {
             )),
       ),
       body: filterData.isEmpty
-          ? NoDataWidget()
+          ? const NoDataWidget()
           : ListView.builder(
               itemBuilder: (context, index) {
                 if (filterData.isNotEmpty) {

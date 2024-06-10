@@ -37,5 +37,18 @@ class AppTheme {
           ),
           selectedColor: AppColors.primarylight,
         ),
+        inputDecorationTheme: InputDecorationTheme(
+            // labelStyle: AppTextStyle.bodytext200.copyWith(
+            //   color: AppColors.primaryDark,
+            // ),
+            // activeIndicatorBorder: BorderSide(
+            //   color: AppColors.primaryDark,
+            // ),
+            focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(
+            color: AppColors.primaryDark,
+          ),
+        )),
+        focusColor: AppColors.primaryDark,
       );
 }

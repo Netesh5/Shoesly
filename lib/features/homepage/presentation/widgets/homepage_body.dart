@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -138,7 +140,8 @@ class _HomePageBodyState extends State<HomePageBody> {
         ),
         floatingActionButton: isVisible
             ? Padding(
-                padding: const EdgeInsets.symmetric(vertical: 20),
+                padding:
+                    EdgeInsets.symmetric(vertical: Platform.isIOS ? 0 : 20),
                 child: SizedBox(
                   height: 40,
                   width: 120,
