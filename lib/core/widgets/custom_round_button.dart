@@ -51,10 +51,10 @@ class CustomRoundedButtomState extends State<CustomRoundedButtom> {
         color: widget.isDisabled
             ? AppColors.primarylight300
             : (widget.color ?? theme.primaryColor),
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(40),
         child: InkWell(
           onTap: widget.isDisabled ? null : widget.onPressed,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(40),
           child: Container(
             padding: widget.padding ??
                 EdgeInsets.symmetric(
@@ -62,7 +62,7 @@ class CustomRoundedButtomState extends State<CustomRoundedButtom> {
                   horizontal: widget.horizontalPadding,
                 ),
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(20),
+              borderRadius: BorderRadius.circular(40),
               border: Border.all(
                 color: widget.isDisabled
                     ? AppColors.primarylight300

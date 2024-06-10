@@ -1,4 +1,4 @@
-import 'package:priority_soft_ecommerce/core/services/firesbase/cloud_firestore.dart';
+import 'package:priority_soft_ecommerce/core/services/firebase/cloud_firestore.dart';
 import 'package:priority_soft_ecommerce/features/homepage/data/models/shoes_data_model.dart';
 
 abstract interface class ShoesDataSource {

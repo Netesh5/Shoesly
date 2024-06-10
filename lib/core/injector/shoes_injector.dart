@@ -1,5 +1,5 @@
 import 'package:priority_soft_ecommerce/core/injector/injector.dart';
-import 'package:priority_soft_ecommerce/core/services/firesbase/cloud_firestore.dart';
+import 'package:priority_soft_ecommerce/core/services/firebase/cloud_firestore.dart';
 import 'package:priority_soft_ecommerce/features/homepage/data/datasources/shoes_data_source.dart';
 import 'package:priority_soft_ecommerce/features/homepage/data/repositories/shoes_repo_impl.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/repositories/shoes_repo.dart';
