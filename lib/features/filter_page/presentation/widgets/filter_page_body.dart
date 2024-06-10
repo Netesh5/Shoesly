@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
+import 'package:priority_soft_ecommerce/core/enums/gender_enum.dart';
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
+import 'package:priority_soft_ecommerce/core/enums/sort_by_enum.dart';
 import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_app_bar.dart';
+import 'package:priority_soft_ecommerce/core/widgets/custom_choice_chip.dart';
 import 'package:priority_soft_ecommerce/features/filter_page/presentation/widgets/filter_widgets.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 import 'package:syncfusion_flutter_sliders/sliders.dart';
@@ -29,9 +32,13 @@ class _FilterPageBodyState extends State<FilterPageBody> {
   }
 
   int _selectedChipIndex = 0;
+  int _selectedSortByIndex = 0;
+  int _selctedGenderIndex = 0;
 
   double start = 100.0;
   double end = 500.0;
+
+  int selectedSortBy = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +51,7 @@ class _FilterPageBodyState extends State<FilterPageBody> {
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             FilterWidgets(
                 title: "Brands",
@@ -116,32 +124,74 @@ class _FilterPageBodyState extends State<FilterPageBody> {
                 widget: Row(
                   children: [
                     SizedBox(
-                        width: MediaQuery.of(context).size.width * 0.90,
-                        child:
-                            // RangeSlider(
-                            //   activeColor: AppColors.primaryDark,
-                            //   inactiveColor: AppColors.primarylight200,
-                            //   labels: RangeLabels(start.toString(), end.toString()),
-                            //   values: RangeValues(start, end),
-                            //   onChanged: (value) {
-                            //     setState(() {});
-                            //     start = value.start;
-                            //     end = value.end;
-                            //   },
-                            //   max: 700,
-                            //   min: 0,
-                            // ),
-                            SfRangeSlider(
-                          showLabels: true,
-                          values: SfRangeValues(start, end),
-                          onChanged: (value) {
-                            setState(() {});
-                            start = value.start;
-                            end = value.end;
+                      width: MediaQuery.of(context).size.width * 0.9,
+                      child: SfRangeSlider(
+                        max: 700,
+                        min: 0,
+                        activeColor: AppColors.primaryDark,
+                        inactiveColor: AppColors.primarylight200,
+                        enableTooltip: true,
+                        showLabels: true,
+                        values: SfRangeValues(start, end),
+                        onChanged: (value) {
+                          setState(() {});
+                          start = value.start;
+                          end = value.end;
+                        },
+                      ),
+                    ),
+                  ],
+                )),
+            const SizedBox(
+              height: 20,
+            ),
+            FilterWidgets(
+              title: "Sort By",
+              widget: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: List.generate(
+                    SortBy.values.length,
+                    (index) => Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                        child: CustomChoiceChip(
+                          selectedIndex: _selectedSortByIndex,
+                          index: index,
+                          label: SortBy.values[index].sortBy,
+                          valueChange: (value) {
+                            setState(() {
+                              _selectedSortByIndex = value;
+                            });
                           },
                         )),
-                  ],
-                ))
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            FilterWidgets(
+              title: "Gender",
+              widget: Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: List.generate(
+                  Gender.values.length,
+                  (index) => Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                      child: CustomChoiceChip(
+                        selectedIndex: _selctedGenderIndex,
+                        index: index,
+                        label: Gender.values[index].gender,
+                        valueChange: (value) {
+                          setState(() {
+                            _selctedGenderIndex = value;
+                          });
+                        },
+                      )),
+                ),
+              ),
+            ),
           ],
         ),
       ),

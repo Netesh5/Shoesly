@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
+import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
 import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
@@ -59,6 +60,10 @@ class _ShoesDetailBodyState extends State<ShoesDetailBody> {
                         tag: widget.shoes.name,
                         child: Image.network(
                           widget.shoes.image,
+                          height:
+                              widget.shoes.brand == ShoesBrand.Reebok.brandName
+                                  ? 205
+                                  : null,
                         ),
                       ),
                       ColorIndicatorWidget(),
