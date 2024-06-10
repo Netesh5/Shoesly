@@ -50,6 +50,7 @@ dependencies:
   flutter_pannable_rating_bar: ^2.7.2+1
   syncfusion_flutter_sliders: ^24.2.9
   uuid: ^4.4.0
+  flutter_slidable: ^3.1.0
 
 dev_dependencies:
   flutter_test:

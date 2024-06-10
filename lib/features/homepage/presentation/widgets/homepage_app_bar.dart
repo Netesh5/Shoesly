@@ -5,6 +5,8 @@ import 'package:priority_soft_ecommerce/core/constants/assets.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
 import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
+import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
+import 'package:priority_soft_ecommerce/core/routes/routes.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/utils/size_utils.dart';
@@ -37,7 +39,9 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
               ),
             ),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                NavigationService.pushNamed(routeName: Routes.cartScreen);
+              },
               icon: CustomIcon.applyStyle(Assets.cart, width: 24),
             )
           ],
