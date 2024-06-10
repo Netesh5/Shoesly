@@ -7,21 +7,22 @@ import 'package:priority_soft_ecommerce/core/utils/size_utils.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_filled_button.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_round_button.dart';
 
-successBottomSheet(
-  BuildContext context,
-) {
+successBottomSheet(BuildContext context, {String? title}) {
   return showModalBottomSheet(
       isDismissible: false,
       context: context,
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       builder: (context) {
-        return const _SuccessBottomSheet();
+        return _SuccessBottomSheet(
+          title: title,
+        );
       });
 }
 
 class _SuccessBottomSheet extends StatelessWidget {
-  const _SuccessBottomSheet();
+  const _SuccessBottomSheet({this.title});
 
+  final String? title;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -39,17 +40,19 @@ class _SuccessBottomSheet extends StatelessWidget {
             height: 10,
           ),
           Text(
-            "Added to cart",
+            title ?? "Added to cart",
             style: AppTextStyle.headline700,
           ),
           const SizedBox(
             height: 10,
           ),
-          Text(
-            "1 Item total",
-            style: AppTextStyle.bodytext200
-                .copyWith(color: AppColors.primarylight300),
-          ),
+          title == null
+              ? Text(
+                  "1 Item total",
+                  style: AppTextStyle.bodytext200
+                      .copyWith(color: AppColors.primarylight300),
+                )
+              : const SizedBox(),
           const SizedBox(
             height: 10,
           ),
@@ -70,15 +73,17 @@ class _SuccessBottomSheet extends StatelessWidget {
                         NavigationService.popUntilFirstPage();
                       })),
               CustomFilledButton(
-                title: "GO TO CART",
+                title: title == null ? "GO TO CART" : "DONE",
                 titleStyle: AppTextStyle.heading300
                     .copyWith(color: AppColors.primarylight),
-                containerPadding:
-                    EdgeInsets.symmetric(vertical: 12.hp, horizontal: 35.wp),
+                containerPadding: EdgeInsets.symmetric(
+                    vertical: 12.hp, horizontal: title == null ? 35.wp : 55.wp),
                 fillColor: AppColors.primaryDark,
                 onPressed: () {
-                  NavigationService.popAndPushNamed(
-                      routeName: Routes.cartScreen);
+                  title == null
+                      ? NavigationService.popAndPushNamed(
+                          routeName: Routes.cartScreen)
+                      : NavigationService.popUntilFirstPage();
                 },
               )
             ],
