@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:priority_soft_ecommerce/core/routes/routes.dart';
+import 'package:priority_soft_ecommerce/features/cart/data/models/cart_model.dart';
 import 'package:priority_soft_ecommerce/features/cart/presentation/pages/cart_view.dart';
+import 'package:priority_soft_ecommerce/features/cart/presentation/pages/order_summary_view.dart';
 
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/pages/homepage_view.dart';
@@ -27,6 +29,12 @@ class RouteGenerator {
       case Routes.cartScreen:
         return MaterialPageRoute(
           builder: (context) => const CartDetailView(),
+        );
+      case Routes.orderSummaryScreen:
+        return MaterialPageRoute(
+          builder: (context) => OrderSummaryView(
+            cartModel: setting.arguments as List<CartModel>,
+          ),
         );
 
       default:

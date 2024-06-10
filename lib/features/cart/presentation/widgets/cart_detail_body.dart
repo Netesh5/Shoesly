@@ -4,12 +4,14 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_slidable/flutter_slidable.dart';
 import 'package:priority_soft_ecommerce/core/cubit/common_state.dart';
 import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
+import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
+import 'package:priority_soft_ecommerce/core/routes/routes.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/utils/calculate_total.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_app_bar.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_navigation_bar.dart';
-import 'package:priority_soft_ecommerce/core/widgets/loading_widget.dart';
+
 import 'package:priority_soft_ecommerce/core/widgets/no_data_widget.dart';
 import 'package:priority_soft_ecommerce/features/cart/data/models/cart_model.dart';
 import 'package:priority_soft_ecommerce/features/cart/presentation/cubit/delete_cart_item_cubit.dart';
@@ -30,6 +32,7 @@ class _CartDetailBodyState extends State<CartDetailBody> {
     super.initState();
   }
 
+  List<CartModel> intitalData = [];
   double totalPrice = 0.0;
   @override
   Widget build(BuildContext context) {
@@ -53,7 +56,9 @@ class _CartDetailBodyState extends State<CartDetailBody> {
               if (state.data.isNotEmpty) {
                 return ListView.builder(
                   itemBuilder: (context, index) {
+                    intitalData.clear();
                     final data = state.data[index];
+                    intitalData.addAll(state.data);
                     return Slidable(
                       endActionPane:
                           ActionPane(motion: const ScrollMotion(), children: [
@@ -87,7 +92,10 @@ class _CartDetailBodyState extends State<CartDetailBody> {
           horizontal: 20,
         ),
         child: BottomNavigationBarWithButton(
-          onChanged: () {},
+          onChanged: () {
+            NavigationService.pushNamed(
+                routeName: Routes.orderSummaryScreen, args: intitalData);
+          },
           title: "Go to Checkout",
           textStyle:
               AppTextStyle.heading300.copyWith(color: AppColors.primarylight),

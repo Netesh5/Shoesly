@@ -20,7 +20,7 @@ successBottomSheet(
 }
 
 class _SuccessBottomSheet extends StatelessWidget {
-  const _SuccessBottomSheet({super.key});
+  const _SuccessBottomSheet();
 
   @override
   Widget build(BuildContext context) {
@@ -77,7 +77,8 @@ class _SuccessBottomSheet extends StatelessWidget {
                     EdgeInsets.symmetric(vertical: 12.hp, horizontal: 35.wp),
                 fillColor: AppColors.primaryDark,
                 onPressed: () {
-                  NavigationService.pushNamed(routeName: Routes.cartScreen);
+                  NavigationService.popAndPushNamed(
+                      routeName: Routes.cartScreen);
                 },
               )
             ],
