@@ -19,4 +19,5 @@ class Assets {
   static const star = "assets/icons/star.svg";
   static const filter = "assets/icons/filter.svg";
   static const leftArrow = "assets/icons/arrow-left.svg";
+  static const error = "assets/icons/error_icon.svg";
 }

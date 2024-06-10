@@ -3,6 +3,8 @@ import 'package:priority_soft_ecommerce/core/constants/assets.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
 import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
+import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
+import 'package:priority_soft_ecommerce/core/routes/routes.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_app_bar.dart';
@@ -76,9 +78,6 @@ class _ShoesDetailBodyState extends State<ShoesDetailBody> {
               height: 20,
             ),
             ShoesDetailDescriptionWidget(widget: widget),
-            const SizedBox(
-              height: 20,
-            ),
             Center(
               child: Container(
                   width: 315,
@@ -90,7 +89,11 @@ class _ShoesDetailBodyState extends State<ShoesDetailBody> {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: CustomRoundedButtom(
-                      title: "SEE ALL REVIEW", onPressed: () {})),
+                      title: "SEE ALL REVIEW",
+                      onPressed: () {
+                        NavigationService.pushNamed(
+                            routeName: Routes.reviewScreen, args: widget.shoes);
+                      })),
             ),
             const SizedBox(
               height: 20,

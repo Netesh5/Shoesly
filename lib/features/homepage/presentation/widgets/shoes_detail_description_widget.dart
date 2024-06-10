@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
+import 'package:priority_soft_ecommerce/core/utils/calculate_rating.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/rating_widget.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/review_widget.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/shoes_detail_body.dart';
@@ -30,12 +31,13 @@ class ShoesDetailDescriptionWidget extends StatelessWidget {
           ),
           Row(
             children: [
-              CustomRatingWidget(rating: widget.shoes.rating.toDouble()),
+              CustomRatingWidget(
+                  rating: calculateAverageRating(widget.shoes.review)),
               const SizedBox(
                 width: 4,
               ),
               Text(
-                widget.shoes.rating.toString(),
+                calculateAverageRating(widget.shoes.review).toString(),
                 style: const TextStyle(fontWeight: FontWeight.w700),
               ),
               const SizedBox(
@@ -83,7 +85,7 @@ class ShoesDetailDescriptionWidget extends StatelessWidget {
             3,
             (index) => ReviewWidget(
               review: widget.shoes.review[index],
-              rating: widget.shoes.rating.toDouble(),
+              rating: widget.shoes.review[index].rating.toDouble(),
             ),
           )
         ],

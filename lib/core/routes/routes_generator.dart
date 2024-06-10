@@ -4,6 +4,7 @@ import 'package:priority_soft_ecommerce/core/routes/routes.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/pages/homepage_view.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/pages/shoes_detail_view.dart';
+import 'package:priority_soft_ecommerce/features/review/presentation/pages/review_view.dart';
 
 class RouteGenerator {
   static Route<dynamic> routeGenerator(RouteSettings setting) {
@@ -16,10 +17,12 @@ class RouteGenerator {
             shoes: setting.arguments as Shoes,
           ),
         );
-      // case Routes.filterScreen:
-      //   return MaterialPageRoute(
-      //     builder: (context) => const FilterPageView(),
-      //   );
+      case Routes.reviewScreen:
+        return MaterialPageRoute(
+          builder: (context) => ReviewView(
+            shoes: setting.arguments as Shoes,
+          ),
+        );
 
       default:
         return MaterialPageRoute(builder: (context) => const HomePageView());

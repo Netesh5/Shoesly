@@ -27,16 +27,18 @@ class Review {
   final String name;
   final String review;
   final String time;
+  final num rating;
   Review({
     required this.name,
     required this.review,
     required this.time,
+    required this.rating,
   });
   factory Review.fromMap(Map<String, dynamic> map) {
     return Review(
-      name: map['name'] ?? "",
-      review: map['review'] ?? "",
-      time: map['time'] ?? "",
-    );
+        name: map['name'] ?? "",
+        review: map['review'] ?? "",
+        time: map['time'] ?? "",
+        rating: map["rating"] ?? 0);
   }
 }

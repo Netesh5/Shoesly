@@ -33,7 +33,7 @@ class _HomePageBodyState extends State<HomePageBody> {
   void initState() {
     context.read<FetchShoesDataCubit>().fetchStoreData();
     scrollController = ScrollController();
-    // CloudFirestoreService().uplodImage();
+    CloudFirestoreService().uplodImage();
     super.initState();
   }
 

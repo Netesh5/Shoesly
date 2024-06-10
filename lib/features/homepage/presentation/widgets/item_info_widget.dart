@@ -4,6 +4,7 @@ import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
 import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
+import 'package:priority_soft_ecommerce/core/utils/calculate_rating.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 
 class ItemInfoWidget extends StatelessWidget {
@@ -36,7 +37,7 @@ class ItemInfoWidget extends StatelessWidget {
                 width: 10,
               ),
               Text(
-                data[index].rating.toString(),
+                calculateAverageRating(data[index].review).toString(),
                 style: AppTextStyle.heading300,
               ),
               const SizedBox(
