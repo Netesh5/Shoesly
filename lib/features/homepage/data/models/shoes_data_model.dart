@@ -10,6 +10,8 @@ class ShoesModel extends Shoes {
     required super.review,
     required super.brand,
     required super.image,
+    required super.gender,
+    required super.color,
   });
 
   factory ShoesModel.fromSnapshot(Map<String, dynamic> json) {
@@ -25,6 +27,8 @@ class ShoesModel extends Shoes {
           .toList(),
       brand: data['brand'] ?? "",
       image: data["image"] ?? "",
+      gender: data["gender"] ?? "",
+      color: data["color"] ?? "",
     );
   }
 }

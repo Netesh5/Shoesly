@@ -7,6 +7,8 @@ class Shoes {
   final List<Review> review;
   final String brand;
   final String image;
+  final String gender;
+  final String color;
   Shoes({
     required this.name,
     required this.description,
@@ -16,6 +18,8 @@ class Shoes {
     required this.review,
     required this.brand,
     required this.image,
+    required this.gender,
+    required this.color,
   });
 }
 

@@ -7,6 +7,7 @@ import 'package:priority_soft_ecommerce/core/cubit/common_state.dart';
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
 import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
 import 'package:priority_soft_ecommerce/core/routes/routes.dart';
+import 'package:priority_soft_ecommerce/core/services/firesbase/cloud_firestore.dart';
 
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
@@ -32,7 +33,7 @@ class _HomePageBodyState extends State<HomePageBody> {
   void initState() {
     context.read<FetchShoesDataCubit>().fetchStoreData();
     scrollController = ScrollController();
-
+    // CloudFirestoreService().uplodImage();
     super.initState();
   }
 
@@ -144,7 +145,14 @@ class _HomePageBodyState extends State<HomePageBody> {
                   child: FloatingActionButton.extended(
                     backgroundColor: AppColors.primaryDark,
                     onPressed: () {
-                      showFilterBottomSheet(context, initalData);
+                      showFilterBottomSheet(
+                        context: context,
+                        shoes: initalData,
+                        onChanged: (value) {
+                          filterData = value;
+                          setState(() {});
+                        },
+                      );
                     },
                     label: Text(
                       "Filter",

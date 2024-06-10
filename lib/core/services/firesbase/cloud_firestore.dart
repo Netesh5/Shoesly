@@ -17,6 +17,8 @@ class CloudFirestoreService {
             "price": "200",
             "brand": "nike",
             "rating": 4.5,
+            "gender": "unisex",
+            "color": "green",
             "size": 41,
             "review": [
               {
@@ -61,6 +63,8 @@ class CloudFirestoreService {
             "brand": "nike",
             "rating": 4.5,
             "size": 41,
+            "gender": "unisex",
+            "color": "green",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -104,6 +108,8 @@ class CloudFirestoreService {
             "brand": "nike",
             "rating": 4.5,
             "size": 41,
+            "gender": "male",
+            "color": "blue",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -147,6 +153,8 @@ class CloudFirestoreService {
             "brand": "nike",
             "rating": 4.5,
             "size": 41,
+            "gender": "unisex",
+            "color": "red",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -190,6 +198,8 @@ class CloudFirestoreService {
             "brand": "nike",
             "rating": 4.5,
             "size": 41,
+            "gender": "female",
+            "color": "grey",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -233,6 +243,8 @@ class CloudFirestoreService {
             "brand": "jordan",
             "rating": 4.5,
             "size": 41,
+            "gender": "unisex",
+            "color": "red",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -276,6 +288,8 @@ class CloudFirestoreService {
             "brand": "jordan",
             "rating": 4.5,
             "size": 41,
+            "gender": "male",
+            "color": "white",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -321,6 +335,8 @@ class CloudFirestoreService {
             "brand": "adidas",
             "rating": 4.5,
             "size": 41,
+            "gender": "male",
+            "color": "grey",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -364,6 +380,8 @@ class CloudFirestoreService {
             "brand": "adidas",
             "rating": 4.5,
             "size": 41,
+            "gender": "female",
+            "color": "black",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -407,6 +425,8 @@ class CloudFirestoreService {
             "brand": "adidas",
             "rating": 4.5,
             "size": 41,
+            "gender": "male",
+            "color": "black",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -452,6 +472,8 @@ class CloudFirestoreService {
             "brand": "reebok",
             "rating": 4.5,
             "size": 41,
+            "gender": "unisex",
+            "color": "black",
             "review": [
               {
                 "name": "Nolan Carder",
@@ -495,6 +517,8 @@ class CloudFirestoreService {
             "brand": "reebok",
             "rating": 4.5,
             "size": 41,
+            "gender": "male",
+            "color": "black",
             "review": [
               {
                 "name": "Nolan Carder",
