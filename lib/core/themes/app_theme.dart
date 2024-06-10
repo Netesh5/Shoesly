@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 
@@ -11,6 +12,11 @@ class AppTheme {
         primaryColor: AppColors.primarylight,
         appBarTheme: AppBarTheme(
           color: AppColors.primarylight,
+          systemOverlayStyle: SystemUiOverlayStyle(
+            statusBarColor: AppColors.primarylight,
+            statusBarIconBrightness: Brightness.dark,
+            statusBarBrightness: Brightness.light,
+          ),
         ),
         textTheme: TextTheme(
           displayLarge: AppTextStyle.headline900,

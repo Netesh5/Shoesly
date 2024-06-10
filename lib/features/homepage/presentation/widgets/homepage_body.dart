@@ -11,6 +11,7 @@ import 'package:priority_soft_ecommerce/core/routes/routes.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/widgets/shimmer_effect.dart';
+import 'package:priority_soft_ecommerce/features/filter_page/presentation/widgets/filter_bottomsheet.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/cubit/fetch_shoes_data_cubit.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/homepage_app_bar.dart';
@@ -36,6 +37,7 @@ class _HomePageBodyState extends State<HomePageBody> {
   }
 
   ShoesBrand currentBrand = ShoesBrand.All;
+  List<Shoes> initalData = [];
   List<Shoes> filterData = [];
   filterItems(List<Shoes> shoes) {
     if (currentBrand == ShoesBrand.All) {
@@ -80,6 +82,8 @@ class _HomePageBodyState extends State<HomePageBody> {
                       return const CustomShimmerEffect();
                     }
                     if (state is CommonSuccessState<List<Shoes>>) {
+                      initalData.clear();
+                      initalData.addAll(state.data);
                       filterData = filterItems(state.data);
 
                       return SliverPadding(
@@ -139,7 +143,9 @@ class _HomePageBodyState extends State<HomePageBody> {
                   width: 120,
                   child: FloatingActionButton.extended(
                     backgroundColor: AppColors.primaryDark,
-                    onPressed: () {},
+                    onPressed: () {
+                      showFilterBottomSheet(context, initalData);
+                    },
                     label: Text(
                       "Filter",
                       style: AppTextStyle.heading300.copyWith(

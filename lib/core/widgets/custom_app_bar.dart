@@ -21,6 +21,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final double topPadding;
   final bool showShadow;
   final Color? backButtonColor;
+
   const CustomAppBar({
     super.key,
     this.centerWidget,

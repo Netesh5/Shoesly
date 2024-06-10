@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:priority_soft_ecommerce/core/routes/routes.dart';
+
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/pages/homepage_view.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/pages/shoes_detail_view.dart';
@@ -15,6 +16,10 @@ class RouteGenerator {
             shoes: setting.arguments as Shoes,
           ),
         );
+      // case Routes.filterScreen:
+      //   return MaterialPageRoute(
+      //     builder: (context) => const FilterPageView(),
+      //   );
 
       default:
         return MaterialPageRoute(builder: (context) => const HomePageView());
