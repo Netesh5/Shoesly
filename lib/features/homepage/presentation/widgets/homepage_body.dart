@@ -9,11 +9,12 @@ import 'package:priority_soft_ecommerce/core/cubit/common_state.dart';
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
 import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
 import 'package:priority_soft_ecommerce/core/routes/routes.dart';
-import 'package:priority_soft_ecommerce/core/services/firebase/cloud_firestore.dart';
 
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
+import 'package:priority_soft_ecommerce/core/widgets/no_data_widget.dart';
 import 'package:priority_soft_ecommerce/core/widgets/shimmer_effect.dart';
+import 'package:priority_soft_ecommerce/features/cart/presentation/cubit/fetch_cart_detail.dart';
 import 'package:priority_soft_ecommerce/features/filter_page/presentation/widgets/filter_bottomsheet.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/cubit/fetch_shoes_data_cubit.dart';
@@ -36,6 +37,7 @@ class _HomePageBodyState extends State<HomePageBody> {
     context.read<FetchShoesDataCubit>().fetchStoreData();
     scrollController = ScrollController();
     // CloudFirestoreService().uplodImage();
+    context.read<FetchCartDetailCubit>().fetchCartDetail();
     super.initState();
   }
 
@@ -55,87 +57,107 @@ class _HomePageBodyState extends State<HomePageBody> {
   Widget build(BuildContext context) {
     return Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        body: NotificationListener<UserScrollNotification>(
-          onNotification: (notification) {
-            if (notification.direction == ScrollDirection.forward) {
-              setState(() {
-                isVisible = true;
-              });
-            } else if (notification.direction == ScrollDirection.reverse) {
-              setState(() {
-                isVisible = false;
-              });
-            }
-            return true;
+        body: RefreshIndicator.adaptive(
+          triggerMode: RefreshIndicatorTriggerMode.anywhere,
+          onRefresh: () async {
+            context.read<FetchShoesDataCubit>().fetchStoreData();
+            return Future.delayed(const Duration(seconds: 1));
           },
-          child: CustomScrollView(
-            controller: scrollController,
-            slivers: [
-              HomepageAppBar(
-                onTap: (value) {
-                  currentBrand = value;
-                  setState(() {});
-                },
-              ),
-              SliverPadding(
-                padding: const EdgeInsets.symmetric(),
-                sliver: BlocBuilder<FetchShoesDataCubit, CommonState>(
-                  builder: (context, state) {
-                    if (state is CommonLoadingState) {
-                      return const CustomShimmerEffect();
-                    }
-                    if (state is CommonSuccessState<List<Shoes>>) {
-                      initalData.clear();
-                      initalData.addAll(state.data);
-                      filterData = filterItems(state.data);
-
-                      return SliverPadding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        sliver: SliverGrid.builder(
-                            gridDelegate:
-                                const SliverGridDelegateWithFixedCrossAxisCount(
-                              crossAxisCount: 2,
-                              childAspectRatio: 0.6,
-                              mainAxisSpacing: 20,
-                              crossAxisSpacing: 14,
-                            ),
-                            itemCount: filterData.length,
-                            itemBuilder: (context, index) {
-                              return GestureDetector(
-                                onTap: () {
-                                  NavigationService.pushNamed(
-                                    routeName: Routes.detailScreen,
-                                    args: filterData[index],
-                                  );
-                                },
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Hero(
-                                      tag: filterData[index].name,
-                                      child: ItemCardWidget(
-                                        data: filterData,
-                                        index: index,
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      height: 8,
-                                    ),
-                                    ItemInfoWidget(
-                                      data: filterData,
-                                      index: index,
-                                    ),
-                                  ],
-                                ),
-                              );
-                            }),
-                      );
-                    }
-                    return const CustomShimmerEffect();
+          child: NotificationListener<UserScrollNotification>(
+            onNotification: (notification) {
+              if (notification.direction == ScrollDirection.forward) {
+                setState(() {
+                  isVisible = true;
+                });
+              } else if (notification.direction == ScrollDirection.reverse) {
+                setState(() {
+                  isVisible = false;
+                });
+              }
+              return true;
+            },
+            child: CustomScrollView(
+              controller: scrollController,
+              physics: const AlwaysScrollableScrollPhysics(),
+              slivers: [
+                HomepageAppBar(
+                  onTap: (value) {
+                    currentBrand = value;
+                    setState(() {});
                   },
                 ),
-              )
-            ],
+                SliverPadding(
+                  padding: const EdgeInsets.symmetric(),
+                  sliver: BlocBuilder<FetchShoesDataCubit, CommonState>(
+                    builder: (context, state) {
+                      if (state is CommonLoadingState) {
+                        return const CustomShimmerEffect();
+                      }
+                      if (state is CommonSuccessState<List<Shoes>>) {
+                        initalData.clear();
+                        initalData.addAll(state.data);
+                        filterData = filterItems(state.data);
+                        if (filterData.isNotEmpty) {
+                          return SliverPadding(
+                            padding: const EdgeInsets.symmetric(horizontal: 20),
+                            sliver: SliverGrid.builder(
+                                gridDelegate:
+                                    const SliverGridDelegateWithFixedCrossAxisCount(
+                                  crossAxisCount: 2,
+                                  childAspectRatio: 0.6,
+                                  mainAxisSpacing: 20,
+                                  crossAxisSpacing: 14,
+                                ),
+                                itemCount: filterData.length,
+                                itemBuilder: (context, index) {
+                                  return GestureDetector(
+                                    onTap: () {
+                                      NavigationService.pushNamed(
+                                        routeName: Routes.detailScreen,
+                                        args: filterData[index],
+                                      );
+                                    },
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.start,
+                                      children: [
+                                        Hero(
+                                          tag: filterData[index].name,
+                                          child: ItemCardWidget(
+                                            data: filterData,
+                                            index: index,
+                                          ),
+                                        ),
+                                        const SizedBox(
+                                          height: 8,
+                                        ),
+                                        ItemInfoWidget(
+                                          data: filterData,
+                                          index: index,
+                                        ),
+                                      ],
+                                    ),
+                                  );
+                                }),
+                          );
+                        } else {
+                          const SliverToBoxAdapter(child: NoDataWidget());
+                        }
+                      }
+                      return const SliverToBoxAdapter(
+                          child: Column(
+                        children: [
+                          SizedBox(
+                            height: 200,
+                          ),
+                          NoDataWidget(),
+                        ],
+                      ));
+                    },
+                  ),
+                )
+              ],
+            ),
           ),
         ),
         floatingActionButton: isVisible
@@ -152,7 +174,10 @@ class _HomePageBodyState extends State<HomePageBody> {
                         context: context,
                         shoes: initalData,
                         onChanged: (value) {
-                          filterData = value;
+                          filterData.clear();
+                          for (var val in value) {
+                            filterData.add(val);
+                          }
                           setState(() {});
                         },
                       );

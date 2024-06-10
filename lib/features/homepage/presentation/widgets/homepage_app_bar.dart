@@ -1,8 +1,12 @@
 // ignore_for_file: must_be_immutable
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:priority_soft_ecommerce/core/constants/assets.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
+import 'package:priority_soft_ecommerce/core/cubit/common_state.dart';
+
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
 import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
 import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
@@ -10,6 +14,8 @@ import 'package:priority_soft_ecommerce/core/routes/routes.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/utils/size_utils.dart';
+import 'package:priority_soft_ecommerce/features/cart/data/models/cart_model.dart';
+import 'package:priority_soft_ecommerce/features/cart/presentation/cubit/fetch_cart_detail.dart';
 
 class HomepageAppBar extends StatefulWidget {
   const HomepageAppBar({super.key, required this.onTap});
@@ -39,11 +45,34 @@ class _HomepageAppBarState extends State<HomepageAppBar> {
               ),
             ),
             IconButton(
-              onPressed: () {
-                NavigationService.pushNamed(routeName: Routes.cartScreen);
-              },
-              icon: CustomIcon.applyStyle(Assets.cart, width: 24),
-            )
+                onPressed: () {
+                  NavigationService.pushNamed(routeName: Routes.cartScreen);
+                },
+                icon: BlocSelector<FetchCartDetailCubit, CommonState, bool>(
+                  selector: (state) {
+                    if (state is CommonSuccessState<List<CartModel>>) {
+                      if (state.data.isNotEmpty) {
+                        return true;
+                      }
+                    }
+                    return false;
+                  },
+                  builder: (context, state) {
+                    return Stack(
+                      children: [
+                        CustomIcon.applyStyle(Assets.cart, width: 24),
+                        if (state)
+                          const Positioned(
+                              left: 14,
+                              top: 5,
+                              child: CircleAvatar(
+                                backgroundColor: AppColors.primaryError500,
+                                radius: 4,
+                              ))
+                      ],
+                    );
+                  },
+                ))
           ],
         ),
       ),

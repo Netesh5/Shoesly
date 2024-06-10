@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
 import 'package:priority_soft_ecommerce/core/routes/routes.dart';
 import 'package:priority_soft_ecommerce/core/themes/app_colors.dart';
@@ -6,6 +7,7 @@ import 'package:priority_soft_ecommerce/core/themes/app_text.dart';
 import 'package:priority_soft_ecommerce/core/utils/size_utils.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_filled_button.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_round_button.dart';
+import 'package:priority_soft_ecommerce/features/cart/presentation/cubit/fetch_cart_detail.dart';
 
 successBottomSheet(BuildContext context, {String? title}) {
   return showModalBottomSheet(
@@ -70,6 +72,7 @@ class _SuccessBottomSheet extends StatelessWidget {
                       title: "BACK EXPLORE",
                       textStyle: AppTextStyle.heading300,
                       onPressed: () {
+                        context.read<FetchCartDetailCubit>().fetchCartDetail();
                         NavigationService.popUntilFirstPage();
                       })),
               CustomFilledButton(

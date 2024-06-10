@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets.dart';
 import 'package:priority_soft_ecommerce/core/constants/assets_style.dart';
-import 'package:priority_soft_ecommerce/core/cubit/common_state.dart';
 import 'package:priority_soft_ecommerce/core/enums/shoes_brand_enum.dart';
 import 'package:priority_soft_ecommerce/core/extension/string_extension.dart';
 import 'package:priority_soft_ecommerce/core/navigation/navigation_service.dart';
@@ -13,9 +11,6 @@ import 'package:priority_soft_ecommerce/core/widgets/custom_app_bar.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_card_widget.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_navigation_bar.dart';
 import 'package:priority_soft_ecommerce/core/widgets/custom_round_button.dart';
-import 'package:priority_soft_ecommerce/core/widgets/loading_widget.dart';
-import 'package:priority_soft_ecommerce/features/cart/presentation/cubit/add_to_cart_cubit.dart';
-import 'package:priority_soft_ecommerce/features/cart/presentation/widgets/cart_success_bottomsheet.dart';
 import 'package:priority_soft_ecommerce/features/homepage/domain/entities/shoes_enity.dart';
 import 'package:priority_soft_ecommerce/features/cart/presentation/widgets/add_to_cart_bottomsheet.dart';
 import 'package:priority_soft_ecommerce/features/homepage/presentation/widgets/indicator_widget.dart';

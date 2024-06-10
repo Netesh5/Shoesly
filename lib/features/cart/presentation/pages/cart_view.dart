@@ -6,6 +6,6 @@ class CartDetailView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CartDetailBody();
+    return const CartDetailBody();
   }
 }

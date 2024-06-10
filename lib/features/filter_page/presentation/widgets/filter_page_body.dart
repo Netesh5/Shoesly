@@ -55,12 +55,14 @@ class _FilterPageBodyState extends State<FilterPageBody> {
         showShadow: false,
         title: "Filter",
         centerMiddle: true,
+        topPadding: 50,
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
+            // Brand filter
             FilterWidgets(
                 title: "Brands",
                 widget: Row(
@@ -127,6 +129,8 @@ class _FilterPageBodyState extends State<FilterPageBody> {
             const SizedBox(
               height: 20,
             ),
+
+            // Price Range Filter
             FilterWidgets(
                 title: "Price Range",
                 widget: Row(
@@ -153,6 +157,8 @@ class _FilterPageBodyState extends State<FilterPageBody> {
             const SizedBox(
               height: 20,
             ),
+
+            // Sort By filter
             FilterWidgets(
               title: "Sort By",
               widget: SingleChildScrollView(
@@ -179,6 +185,8 @@ class _FilterPageBodyState extends State<FilterPageBody> {
             const SizedBox(
               height: 20,
             ),
+
+            // Gender
             FilterWidgets(
               title: "Gender",
               widget: Row(
@@ -203,6 +211,8 @@ class _FilterPageBodyState extends State<FilterPageBody> {
             const SizedBox(
               height: 20,
             ),
+
+            // Color filter
             FilterWidgets(
               title: "Colors",
               widget: SingleChildScrollView(
@@ -280,7 +290,7 @@ class _FilterPageBodyState extends State<FilterPageBody> {
                   border: Border.all(),
                   borderRadius: BorderRadius.circular(20)),
               child: CustomRoundedButtom(
-                title: "Reset (4)",
+                title: "Reset All",
                 textStyle: AppTextStyle.heading300,
                 onPressed: () {
                   _selectedBrandIndex = 0;
