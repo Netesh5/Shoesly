@@ -1,4 +1,4 @@
-# Shoely App
+# Shoesly App
 An shoes Ecommerce application created with flutter and firebase.
 
 ## Package used
